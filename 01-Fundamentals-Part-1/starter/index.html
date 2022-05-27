@@ -30,6 +30,25 @@
 <body>
   <h1>JavaScript Fundamentals – Part 1</h1>
   <script src="script.js"></script>
+  
+  <p id="firstP"></p>
+  <p id="secondP"></p>
+
+  <script>
+    const text = `{"name":"xpj","age":"15"}`;
+    let obj = JSON.parse(text);
+    document.getElementById("firstP").innerHTML = obj.name;
+
+    obj.age = function () {
+      return 30;
+    }
+    const text2 = JSON.stringify(obj);
+    
+
+    document.getElementById("secondP").innerHTML = text2;
+    // document.createElement("p").innerHTML = JSON.stringify(obj);
+
+  </script>
 </body>
 
 </html>
